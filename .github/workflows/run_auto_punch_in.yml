@@ -23,4 +23,4 @@ jobs:
           pip install requests selenium
 
       - name: Run Python Script
-        run: python auto_punch_in.py
+        run: python punchIn.py
