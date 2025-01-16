@@ -3,9 +3,19 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 from datetime import date
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 
-# Set up the WebDriver
-driver = webdriver.Chrome()
+# Configure Chrome options for headless mode
+chrome_options = Options()
+chrome_options.add_argument("--headless")  # Run in headless mode
+chrome_options.add_argument("--disable-gpu")  # Disable GPU usage
+chrome_options.add_argument("--no-sandbox")  # Bypass OS security model
+chrome_options.add_argument("--disable-dev-shm-usage")  # Overcome limited resources
+
+# Create a Chrome WebDriver
+driver = webdriver.Chrome(options=chrome_options)
+
 
 
 try:
