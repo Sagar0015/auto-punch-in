@@ -46,7 +46,7 @@ try:
                 birthdayBtn =driver.find_element("xpath", "//*[@id='birthday-quotes-modal']//*[@aria-label='Close']")
                 birthdayBtn.click()
                 print("Birthday pop up closed!!")
-        finally:
+        except:
             print("No birthday pop up detected")
         
         try:
@@ -62,8 +62,8 @@ try:
 
             else:
                 print("Punch-in failed!")
-        finally:
-            print("No punch-in pop up detected")
+        except:
+            print("No punch-in pop up detected in optimis")
 
             # Open the HR management system
         driver.get('https://hr.azminds.com/login')
@@ -87,7 +87,7 @@ try:
                 
             else:
                 print("Punch-in failed!")
-        finally:
+        except:
             print("No punch-in pop up detected")
     else:
         
@@ -95,6 +95,6 @@ try:
 
 
 
-finally:
+except:
     # Close the browser
     driver.quit()
