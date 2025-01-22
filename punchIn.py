@@ -24,7 +24,7 @@ try:
     today = date.today()
     day = today.strftime("%A")
     print("Today is: ",day)
-    if day != "Saturday" or day != "Sunday":
+    if day != "Saturday" and day != "Sunday":
             # # Open the HR management system
         driver.get('https://x.optimis.in/login')
 
